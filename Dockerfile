@@ -12,3 +12,7 @@ run git clone https://github.com/sharelatex/sharelatex.git; \
     npm install; \
     npm install -g grunt-cli; \
     grunt install
+
+add run_sharelatex.sh /usr/bin/run_sharelatex.sh
+
+expose 3000
