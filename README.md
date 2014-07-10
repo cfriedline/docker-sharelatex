@@ -16,7 +16,7 @@ just put in the `docker-sharelatex` directory named `texlive2014.iso`.
 	wget http://mirror.unl.edu/ctan/systems/texlive/Images/texlive2014.iso
 	docker build -t cfriedline/sharelatex:sharelatex .
 
-##Caveats
+###Caveat
 
 For the time being, there's a bug ([#148](https://github.com/sharelatex/sharelatex/issues/148))
 with the current procedure. I've fixed it in my image on the hub, but basically:
