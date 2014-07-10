@@ -8,13 +8,18 @@ run apt-get install -y --force-yes npm wget git vim mongodb-server redis-server
 
 run ln -s /usr/bin/nodejs /usr/bin/node
 
-add texlive2014.iso /
+run wget http://www.gnu.org/software/xorriso/xorriso-1.3.8.tar.gz;\
+    tar zxvf /xorriso-1.3.8.tar.gz; \
+    cd xorriso-1.3.8; \
+    ./configure && make && make install
 
-run git clone https://github.com/scottkosty/install-tl-ubuntu.git; \
-    cd install-tl-ubuntu; \
-    chmod +x install-tl-ubuntu; \
-    ./install-tl-ubuntu -i /texlive2014.iso; \
-    rm /texlive2014.iso
+copy texlive2014.iso /opt
+copy texlive.profile /opt
+
+run osirrox -indev /opt/texlive2014.iso -extract / /texlive2014
+
+run cd /texlive2014; \
+    ./install-tl --profile=/opt/texlive.profile
     
 run git clone https://github.com/sharelatex/sharelatex.git; \
     cd sharelatex; \
@@ -25,3 +30,5 @@ run git clone https://github.com/sharelatex/sharelatex.git; \
 add run_sharelatex.sh /usr/bin/run_sharelatex.sh
 
 expose 3000
+
+maintainer "Chris Friedline (cfriedline@vcu.edu)"
