@@ -1,7 +1,5 @@
 #docker-sharelatex
 
----
-
 ##Build with:
 	git clone https://github.com/cfriedline/docker-sharelatex.git
 	cd docker-sharelatesx
