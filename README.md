@@ -1,6 +1,6 @@
 #docker-sharelatex
 
-This builds a local docker image with Ubuntu 14.04 and TeX Live 2014
+This builds and configures a docker image with Ubuntu 14.04 and TeX Live 2014
 
 ##Build with:
 	git clone https://github.com/cfriedline/docker-sharelatex.git
