@@ -29,6 +29,8 @@ run git clone https://github.com/sharelatex/sharelatex.git; \
 
 add run_sharelatex.sh /usr/bin/run_sharelatex.sh
 
+chmod +x /usr/bin/run_sharelatex.sh
+
 expose 3000
 
 maintainer "Chris Friedline (cfriedline@vcu.edu)"
