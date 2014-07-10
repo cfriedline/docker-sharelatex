@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH=/usr/local/texlive/2014/bin/i386-linux:$PATH
+export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 mongod &
 sleep 5s
 redis-server &
