@@ -6,10 +6,10 @@
 	docker build -t cfriedline/sharelatex:sharelatex .
 
 ##Test with:
-	docker run -p 3000:3000 -v ./db:data/db --name sharelatex cfriedline/sharelatex:sharelatex run_sharelatex.sh
+	docker run -p 3000:3000 -v ./db:/data/db -v ./user_files:/sharelatex/user_files--name sharelatex cfriedline/sharelatex:sharelatex run_sharelatex.sh
 
 ##Run with:
-	docker run -d -p 3000:3000 -v ./db:data/db --name sharelatex cfriedline/sharelatex:sharelatex run_sharelatex.sh
+	docker run -d -p 3000:3000 -v ./db:/data/db -v ./user_files:/sharelatex/user_files --name sharelatex cfriedline/sharelatex:sharelatex run_sharelatex.sh
 
 *Note*: if you're running with a boot2docker virtual machine, you need to also
 forward the local port tcp/3000 to the guest tcp/3000
