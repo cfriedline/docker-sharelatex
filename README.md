@@ -24,6 +24,7 @@ with the current procedure. I've fixed it in my image on the hub, but basically:
 1. build according to the above
 1. run your image interactively (-i -t ... /bin/bash)
 1. comment out the smoke test in /sharelatex/clsi/app.coffee (lines 53-56)
+1. go back to /sharelatex and `grunt install` to recompile
 1. exit your image and commit back with the original name
 1. test/run as above
 
