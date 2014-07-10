@@ -26,7 +26,7 @@ For example:
 
 For example:
 
-	docker run -d -p 3000:3000 -v /home/docker/sharelatexdb:/data/db -v /home/docker/sharelatex/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
+	docker run -d -p 3000:3000 -v /home/docker/sharelatex/db:/data/db -v /home/docker/sharelatex/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
 
 
 
