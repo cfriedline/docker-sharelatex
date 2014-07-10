@@ -16,6 +16,7 @@ This builds and configures a docker image with Ubuntu 14.04 and TeX Live 2014
 *Note*: if you're running with a boot2docker virtual machine, you need to also
 forward the local port tcp/3000 to the guest tcp/3000
 
-Based on the originals from [ShareLaTex](https://github.com/sharelatex/sharelatex) and 
+Based on the originals from [ShareLaTex](https://github.com/sharelatex/sharelatex) and
+[Tiago's](https://github.com/tiagoboldt) 
 [sharelatex-docker](https://github.com/tiagoboldt/sharelatex-docker)
 
