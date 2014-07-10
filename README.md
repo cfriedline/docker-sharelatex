@@ -3,6 +3,10 @@
 This builds and configures a docker image with Ubuntu 14.04 and TeX Live 2014
 
 ##Build with:
+
+Given that TeX Live is huge, it's a better idea to either wget the iso or download it via torrent. For the torrent,
+just put in the `docker-sharelatex` directory named `texlive2014.iso`.
+
 	git clone https://github.com/cfriedline/docker-sharelatex.git
 	cd docker-sharelatex
 	wget http://mirror.unl.edu/ctan/systems/texlive/Images/texlive2014.iso
