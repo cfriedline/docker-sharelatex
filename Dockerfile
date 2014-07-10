@@ -7,7 +7,7 @@ run git clone https://github.com/scottkosty/install-tl-ubuntu.git; \
     chmod +x install-tl-ubuntu; \
     ./install-tl-ubuntu
     
-RUN git clone https://github.com/sharelatex/sharelatex.git; \
+run git clone https://github.com/sharelatex/sharelatex.git; \
     cd sharelatex; \
     npm install; \
     npm install -g grunt-cli; \
