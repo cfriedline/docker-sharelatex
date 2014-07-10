@@ -16,6 +16,18 @@ just put in the `docker-sharelatex` directory named `texlive2014.iso`.
 	wget http://mirror.unl.edu/ctan/systems/texlive/Images/texlive2014.iso
 	docker build -t cfriedline/sharelatex:sharelatex .
 
+##Caveats
+
+For the time being, there's a bug ([#148](https://github.com/sharelatex/sharelatex/issues/148))
+with the current procedure. I've fixed it in my image on the hub, but basically:
+
+1. build according to the above
+1. run your image interactively (-i -t ... /bin/bash)
+1. comment out the smoke test in /sharelatex/clsi/app.coffee (lines 53-56)
+1. exit your image and commit back with the original name
+1. test/run as above
+
+
 ##Test with:
 	docker run -p 3000:3000 -v /path/to/db:/data/db -v /path/to/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
 
@@ -41,13 +53,3 @@ Based on the originals from [ShareLaTex](https://github.com/sharelatex/sharelate
 [Tiago's](https://github.com/tiagoboldt) 
 [sharelatex-docker](https://github.com/tiagoboldt/sharelatex-docker)
 
-##Caveats
-
-For the time being, there's a bug ([#148](https://github.com/sharelatex/sharelatex/issues/148))
-with the current procedure. I've fixed it in my image on the hub, but basically:
-
-1. build according to the above
-1. run your image interactively (-i -t ... /bin/bash)
-1. comment out the smoke test in /sharelatex/clsi/app.coffee (lines 53-56)
-1. exit your image and commit back with the original name
-1. test/run as above
