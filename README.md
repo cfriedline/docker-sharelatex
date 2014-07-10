@@ -13,11 +13,20 @@ just put in the `docker-sharelatex` directory named `texlive2014.iso`.
 	docker build -t cfriedline/sharelatex:sharelatex .
 
 ##Test with:
-	docker run -p 3000:3000 -v /path/to/repo/db:/data/db -v /path/to/repo/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
+	docker run -p 3000:3000 -v /path/to/db:/data/db -v /path/to/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
+
+For example:
+	docker run -p 3000:3000 -v /home/docker/sharelatexdb:/data/db -v /home/docker/sharelatex/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
+
 
 ##Run with:
-	docker run -d -p 3000:3000 -v /path/to/repo/db:/data/db -v /path/to/repo/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
-	
+	docker run -d -p 3000:3000 -v /path/to/db:/data/db -v /path/to/repo/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
+
+For example:
+	docker run -d -p 3000:3000 -v /home/docker/sharelatexdb:/data/db -v /home/docker/sharelatex/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
+
+
+
 *Note*: if you're running with a boot2docker virtual machine, you need to also
 forward the local port tcp/3000 to the guest tcp/3000
 
