@@ -1,3 +1,5 @@
+maintainer "Chris Friedline (cfriedline@vcu.edu)"
+
 from ubuntu:14.04
 
 run apt-get update
@@ -21,13 +23,15 @@ run osirrox -indev /texlive2014.iso -extract / /texlive2014
 run cd /texlive2014; \
     ./install-tl --profile=/texlive.profile
     
-run git clone https://github.com/sharelatex/sharelatex.git
+run git clone https://github.com/sharelatex/sharelatex.git; \
+    cd sharelatex; \
+    npm install; \
+    npm install -g grunt-cli; \
+    grunt install
 
 copy app.coffee /sharelatex/clsi
 
-run cd sharelatex; \
-    npm install; \
-    npm install -g grunt-cli; \
+run cd /sharelatex; \
     grunt install
 
 add run_sharelatex.sh /usr/bin/run_sharelatex.sh
@@ -35,5 +39,3 @@ add run_sharelatex.sh /usr/bin/run_sharelatex.sh
 chmod +x /usr/bin/run_sharelatex.sh
 
 expose 3000
-
-maintainer "Chris Friedline (cfriedline@vcu.edu)"
