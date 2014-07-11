@@ -38,4 +38,6 @@ add run_sharelatex.sh /usr/bin/run_sharelatex.sh
 
 chmod +x /usr/bin/run_sharelatex.sh
 
+run rm -rf /texlive2014*
+
 expose 3000
