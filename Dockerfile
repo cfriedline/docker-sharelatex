@@ -21,8 +21,11 @@ run osirrox -indev /texlive2014.iso -extract / /texlive2014
 run cd /texlive2014; \
     ./install-tl --profile=/texlive.profile
     
-run git clone https://github.com/sharelatex/sharelatex.git; \
-    cd sharelatex; \
+run git clone https://github.com/sharelatex/sharelatex.git
+
+copy app.coffee /sharelatex/clsi
+
+run cd sharelatex; \
     npm install; \
     npm install -g grunt-cli; \
     grunt install
