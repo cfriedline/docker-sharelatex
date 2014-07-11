@@ -28,7 +28,7 @@ with the current procedure. I've fixed it in my image on the hub, but basically:
 1. exit your image and `commit` back with the original name
 1. test/run as above
 
-*Note*:This has been amended in the Dockerfile with the addition of `app.coffee`
+*Note*: This has been amended in the Dockerfile with the addition of a custom `app.coffee`
 
 ##Test with:
 	docker run -p 3000:3000 -v /path/to/db:/data/db -v /path/to/user_files:/sharelatex/user_files cfriedline/sharelatex:sharelatex run_sharelatex.sh
