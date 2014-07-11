@@ -16,7 +16,7 @@ run apt-get install -y --force-yes nodejs
 
 run apt-get install -y --force-yes wget git vim mongodb-server redis-server
 
-run ln -s /usr/bin/nodejs /usr/bin/node
+#run ln -s /usr/bin/nodejs /usr/bin/node
 
 run wget http://www.gnu.org/software/xorriso/xorriso-1.3.8.tar.gz;\
     tar zxvf /xorriso-1.3.8.tar.gz; \
