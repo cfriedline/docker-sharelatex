@@ -12,7 +12,7 @@ run add-apt-repository -y ppa:chris-lea/node.js
 
 run apt-get update
 
-run apt-get install -y --forece-yes nodejs
+run apt-get install -y --force-yes nodejs
 
 run apt-get install -y --force-yes npm wget git vim mongodb-server redis-server
 
