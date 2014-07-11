@@ -36,7 +36,6 @@ run git clone https://github.com/sharelatex/sharelatex.git; \
 copy app.coffee /sharelatex/clsi/app.coffee
 
 run cd /sharelatex; \
-    grunt install; \
     rm -rf web/node_modules/bcrypt; \
     grunt install
 
