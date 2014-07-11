@@ -1,6 +1,6 @@
-maintainer "Chris Friedline (cfriedline@vcu.edu)"
-
 from ubuntu:14.04
+
+maintainer "Chris Friedline (cfriedline@vcu.edu)"
 
 run apt-get update
 
