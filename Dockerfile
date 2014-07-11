@@ -8,7 +8,7 @@ run apt-get dist-upgrade -y --force-yes
 
 run apt-get install python-software-properties
 
-run add-apt-repository ppa:chris-lea/node.js
+run add-apt-repository -y ppa:chris-lea/node.js
 
 run apt-get update
 
