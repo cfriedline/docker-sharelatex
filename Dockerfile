@@ -29,7 +29,7 @@ run git clone https://github.com/sharelatex/sharelatex.git; \
     npm install -g grunt-cli; \
     grunt install
 
-copy app.coffee /sharelatex/clsi
+copy app.coffee /sharelatex/clsi/app.coffee
 
 run cd /sharelatex; \
     grunt install
